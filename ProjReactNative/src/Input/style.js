@@ -2,11 +2,13 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     input: {
-        backgroundColor: '#fff',
-        borderWidth: 0.5,
-        borderColor: '#d6d7da',
+        color: '#fff',
+        backgroundColor: '#383737',
+        borderBottomColor: '#d6d7da',
+        borderBottomWidth: 1,
+        fontSize: 18,
+        marginVertical: 10,
         padding: 15,
-        marginVertical: 10
     }
 });
 

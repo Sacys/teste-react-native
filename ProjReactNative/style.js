@@ -3,16 +3,24 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#383737',
         justifyContent: 'center',
         textAlign: 'center',
-        marginHorizontal: 25
+        paddingHorizontal: 25
     },
-    title: {
-        color: '#5b00ae',
-        fontSize: 22,
-        marginBottom: 10,
-    }
+    img: {
+        height: 70,
+        marginBottom: 20,
+        marginHorizontal: 'auto',
+        width: '76%',
+    },
+    // imgEffect: {
+    //     height: 250,
+    //     width: '67%',
+    //     position: 'absolute',
+    //     bottom: -60,
+    //     right: -50,
+    // }
 });
 
 export default styles;

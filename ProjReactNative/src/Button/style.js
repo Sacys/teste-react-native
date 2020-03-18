@@ -7,10 +7,11 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     button: {
-        backgroundColor: '#2900cd',
+        backgroundColor: '#47bee8',
         borderRadius: 5,
+        marginTop: 20,
         padding: 10,
-        width: '48%'
+        width: '47%'
     },
     buttonText: {
         color: '#fff',
