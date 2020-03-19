@@ -1,27 +1,29 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import Input from './Input/Input';
-import Button from './Button/Button';
+import styles from './style';
 
-class Login extends React.Component {
-    render() {
-        return(
-            <View style={styles.container}>
-                <StatusBar 
-                    backgroudColor='#dbdbdb'
-                    barStyle='light-content'
-                />
-                    
-                <Image
-                    style={styles.img}
-                    source={{uri : 'https://www.maitha.com.br/images/logoMaitha.png'}}
-                />
-                    
-                <Input />
-                <Button />
-            </View>
-        );
+export default function Login({navigation}) {
+    
+    const pressHandler = () => {
+        navigation.navigate('Home');
     }
-}
+    
+    return(
+        <View style={styles.container}>     
+            <Image style={styles.img} source={{uri : 'https://www.maitha.com.br/images/logoMaitha.png'}} />
+                
+            <Input />
 
-export default Login;
+            <View style={styles.buttonContainer}>
+                <TouchableOpacity style={styles.button} onPress={() => alert('Cadastre-se')}>
+                    <Text style={styles.buttonText}> CADASTRE-SE </Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.button} onPress={pressHandler}>
+                    <Text style={styles.buttonText}> LOGIN </Text>
+                </TouchableOpacity>
+            </View>
+        </View>
+    );
+}

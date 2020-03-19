@@ -14,13 +14,23 @@ const styles = StyleSheet.create({
         marginHorizontal: 'auto',
         width: '76%',
     },
-    // imgEffect: {
-    //     height: 250,
-    //     width: '67%',
-    //     position: 'absolute',
-    //     bottom: -60,
-    //     right: -50,
-    // }
+    buttonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 10
+    },
+    button: {
+        backgroundColor: '#47bee8',
+        borderRadius: 5,
+        marginTop: 20,
+        padding: 10,
+        width: '47%'
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 16,
+        textAlign: 'center'
+    }
 });
 
 export default styles;

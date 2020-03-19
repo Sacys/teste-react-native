@@ -5,10 +5,16 @@ import Home from '../src/Home';
 
 const screens = {
     Login: {
-        screen: Login
+        screen: Login,
+        navigationOptions: {
+            header: null,
+        }
     },
     Home: {
-        screen: Home   
+        screen: Home,
+        navigationOptions: {
+            header: null,
+        }   
     }
 }
 
