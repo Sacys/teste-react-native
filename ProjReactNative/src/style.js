@@ -2,17 +2,17 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         backgroundColor: '#383737',
+        flex: 1,
         justifyContent: 'center',
-        textAlign: 'center',
-        paddingHorizontal: 25
+        paddingHorizontal: 25,
+        textAlign: 'center'
     },
     img: {
         height: 70,
         marginBottom: 20,
         marginHorizontal: 'auto',
-        width: '76%',
+        width: '76%'
     },
     buttonContainer: {
         flexDirection: 'row',

@@ -7,13 +7,13 @@ const screens = {
     Login: {
         screen: Login,
         navigationOptions: {
-            header: null,
+            headerShown: false,
         }
     },
     Home: {
         screen: Home,
         navigationOptions: {
-            header: null,
+            headerShown: false,
         }   
     }
 }
