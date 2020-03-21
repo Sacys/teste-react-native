@@ -48,7 +48,6 @@ const estilo = StyleSheet.create({
         flex: 1,
         backgroundColor: '#383737',
         justifyContent: 'center',
-        textAlign: 'center',
         paddingHorizontal: 25,
     },
     item: {
