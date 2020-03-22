@@ -1,45 +1,30 @@
 import React from 'react';
 import {getCountries} from './api/country'
-import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 class Home extends React.Component{
-    
-  constructor(props) {
-    super(props)
-    console.log(getCountries())
-  }
+    state = {
+        countriesList: [],
+    };
 
-//   componentDidMount() {
-//     return fetch('https://randomuser.me/api/?results=20')
-//     .then((response) => response.json())
-//     .then((responseJson) => {
-//       this.setState({
-//         isLoading: false,
-//         dataSource: responseJson.country,
-//       });
-//     })
-//     .catch(error => {
-//       console.log(error)
-//     });
-//   }
+    componentDidMount(){
+        this.loadCountries();
+    }
+
+    loadCountries = async () => {
+        const response = await getCountries();
+        const countriesList = response.data;
+        this.setState({countriesList})
+    }
 
     render() {
-
-        
-        // if(this.state.isLoading) {
-            return(
-                <View style={estilo.container}>
-                    <ActivityIndicator />
-                </View>
-            );
-        // }
-        // else {
-            // return(
-            //     <View>
-            //         <Text> {getCountries()} </Text>
-            //     </View>
-            // );
-        // }
+        return(
+            <View style={estilo.container}>
+                {this.state.countriesList.map(item => (
+                    <Text style={estilo.text} key={item._id}>{item.countryName}</Text>
+                ))}
+            </View>
+        );
     }
 }
 
