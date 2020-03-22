@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
-import Input from './Input/Input';
+import Input from '../Components/Input/Input';
 import styles from './style';
 
 export default function Login({navigation}) {
