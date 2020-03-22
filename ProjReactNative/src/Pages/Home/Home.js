@@ -14,23 +14,29 @@ class Home extends React.Component{
 
     loadCountries = async () => {
         const response = await getCountries();
-        const countriesList = response.data;
-        countriesList.sort();
+        let countriesList = response.data;
+        
+        countriesList.sort(function (a, b) {
+            if (a.countryName > b.countryName) {
+            return 1;
+            }
+            if (a.countryName < b.countryName) {
+            return -1;
+            }
+            return 0;
+        });
+        
         this.setState({ countriesList });
     }
 
     render() {
         return(
             <View style={styles.container}>
-                <table>
+                <View style={styles.table}>
                     {this.state.countriesList.map(item => (    
-                        <tr>
-                            <td>
-                                <Text style={styles.text} key={item._id}>{item.countryName}</Text>
-                            </td>
-                        </tr>
+                        <Text style={styles.text} key={item._id}>{item.countryName}</Text>
                     ))}
-                </table>
+                </View>
             </View>
         );
     }
