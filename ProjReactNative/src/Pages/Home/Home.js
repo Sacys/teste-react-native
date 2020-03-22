@@ -1,5 +1,5 @@
 import React from 'react';
-import {getCountries} from '../../api/Country'
+import { getCountries } from '../../api/Country'
 import { View, Text } from 'react-native';
 import styles from './style'; 
 
@@ -8,7 +8,7 @@ class Home extends React.Component{
         countriesList: [],
     };
 
-    componentDidMount(){
+    componentDidMount() {
         this.loadCountries();
     }
 
