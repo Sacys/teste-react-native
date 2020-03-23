@@ -7,11 +7,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         paddingHorizontal: 25
     },
+    imgContent: {
+        alignItems: 'center',
+        flexDirection: 'column',
+        width: '100%',
+    },
     img: {
-        height: 70,
+        height: 65,
         marginBottom: 20,
         marginHorizontal: 'auto',
-        width: '76%'
+        width: '83%'
     },
     buttonContainer: {
         flexDirection: 'row',

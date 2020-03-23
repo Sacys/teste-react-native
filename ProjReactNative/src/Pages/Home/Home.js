@@ -17,10 +17,10 @@ class Home extends React.Component{
         let countriesList = response.data;
         
         countriesList.sort(function (a, b) {
-            if (a.countryName > b.countryName) {
+            if (a.name > b.name) {
             return 1;
             }
-            if (a.countryName < b.countryName) {
+            if (a.name < b.name) {
             return -1;
             }
             return 0;
@@ -34,7 +34,7 @@ class Home extends React.Component{
             <View style={styles.container}>
                 <View style={styles.table}>
                     {this.state.countriesList.map(item => (    
-                        <Text style={styles.text} key={item._id}>{item.countryName}</Text>
+                        <Text style={styles.text} key={item._id}>{item.name}</Text>
                     ))}
                 </View>
             </View>

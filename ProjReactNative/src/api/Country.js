@@ -12,7 +12,7 @@ export const getCountries = async () => {
     }
 
     try {
-        let result = await axios.get(`${baseURL}/statecity`, header);
+        let result = await axios.get(`${baseURL}/country`, header);
         return result;
     } catch (error) {
         console.log('Error:', error);

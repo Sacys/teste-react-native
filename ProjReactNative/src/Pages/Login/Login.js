@@ -10,9 +10,11 @@ export default function Login({navigation}) {
     }
     
     return(
-        <View style={styles.container}>     
-            <Image style={styles.img} source={{uri : 'https://www.maitha.com.br/images/logoMaitha.png'}} />
-                
+        <View style={styles.container}>
+            <View style={styles.imgContent}>
+                <Image style={styles.img} source={{uri : 'https://www.maitha.com.br/images/logoMaitha.png'}} />
+            </View>
+
             <Input />
 
             <View style={styles.buttonContainer}>
