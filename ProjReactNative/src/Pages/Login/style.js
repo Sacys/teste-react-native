@@ -10,13 +10,14 @@ const styles = StyleSheet.create({
     imgContent: {
         alignItems: 'center',
         flexDirection: 'column',
+        height: '10%',
         width: '100%',
     },
     img: {
-        height: 65,
+        height: 70,
         marginBottom: 20,
         marginHorizontal: 'auto',
-        width: '83%'
+        width: 275
     },
     buttonContainer: {
         flexDirection: 'row',
